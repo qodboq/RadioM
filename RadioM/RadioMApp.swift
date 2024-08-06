@@ -11,7 +11,7 @@ import SwiftUI
 struct RadioMApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LandinPage()
         }
     }
 }

@@ -11,6 +11,8 @@
 		894095632C620FD900867CB7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894095622C620FD900867CB7 /* ContentView.swift */; };
 		894095652C620FDA00867CB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 894095642C620FDA00867CB7 /* Assets.xcassets */; };
 		894095682C620FDA00867CB7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 894095672C620FDA00867CB7 /* Preview Assets.xcassets */; };
+		894095752C62107500867CB7 /* LandinPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894095742C62107500867CB7 /* LandinPage.swift */; };
+		8940957A2C62634900867CB7 /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894095792C62634900867CB7 /* Program.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,9 @@
 		894095622C620FD900867CB7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		894095642C620FDA00867CB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		894095672C620FDA00867CB7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		894095742C62107500867CB7 /* LandinPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandinPage.swift; sourceTree = "<group>"; };
+		894095782C622EBF00867CB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		894095792C62634900867CB7 /* Program.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +56,11 @@
 		8940955F2C620FD900867CB7 /* RadioM */ = {
 			isa = PBXGroup;
 			children = (
+				894095782C622EBF00867CB7 /* Info.plist */,
 				894095602C620FD900867CB7 /* RadioMApp.swift */,
-				894095622C620FD900867CB7 /* ContentView.swift */,
+				894095732C62104300867CB7 /* Viewmodel */,
+				8940956F2C62100D00867CB7 /* Model */,
+				8940956E2C620FFD00867CB7 /* View */,
 				894095642C620FDA00867CB7 /* Assets.xcassets */,
 				894095662C620FDA00867CB7 /* Preview Content */,
 			);
@@ -65,6 +73,30 @@
 				894095672C620FDA00867CB7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8940956E2C620FFD00867CB7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				894095622C620FD900867CB7 /* ContentView.swift */,
+				894095742C62107500867CB7 /* LandinPage.swift */,
+				894095792C62634900867CB7 /* Program.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8940956F2C62100D00867CB7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		894095732C62104300867CB7 /* Viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Viewmodel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +169,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8940957A2C62634900867CB7 /* Program.swift in Sources */,
+				894095752C62107500867CB7 /* LandinPage.swift in Sources */,
 				894095632C620FD900867CB7 /* ContentView.swift in Sources */,
 				894095612C620FD900867CB7 /* RadioMApp.swift in Sources */,
 			);
@@ -275,9 +309,9 @@
 				DEVELOPMENT_TEAM = N49KM57BK5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RadioM/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -304,9 +338,9 @@
 				DEVELOPMENT_TEAM = N49KM57BK5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RadioM/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

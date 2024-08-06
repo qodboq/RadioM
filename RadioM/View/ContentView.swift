@@ -14,6 +14,9 @@ struct ContentView: View {
     
     
     var body: some View {
+        
+        
+        
         ZStack {
             LinearGradient(colors: [.blue, .white], startPoint: .top, endPoint: .bottomTrailing)
                 .ignoresSafeArea()
@@ -26,26 +29,21 @@ struct ContentView: View {
                         
                     }
                     .shadow(color: .blue, radius: 20, x: 0.0, y: 10)
-//                RoundedRectangle(cornerSize: CGSize(width: 25, height: 25))
-//                    .padding()
-
                 WebView()
-                
-//                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .clipShape(RoundedRectangle(cornerSize: CGSize(width: 20, height: 10)))
                     .padding()
                 Spacer()
                 VStack {
                     Button {
-                        
+                        SoundManager.instance.playStream()
                         isPlaying.toggle()
                     } label: {
-                        Image(systemName: isPlaying ? "play.circle" : "pause.circle")
+                        Image(systemName: isPlaying ?  "pause.circle" : "play.circle")
                             .resizable()
                             .frame(width: 50, height: 50, alignment: .center)
                             .contentTransition(.symbolEffect)
                     }
-                    Text(isPlaying ? "Play" : "Pause")
+                    Text(isPlaying ?  "Pause" : "Play")
                         .foregroundStyle(.blue)
                         .shadow(radius: 10)
                 }
@@ -58,6 +56,11 @@ struct ContentView: View {
 
             
         }
+        
+        
+        
+        
+        
     }
 }
 

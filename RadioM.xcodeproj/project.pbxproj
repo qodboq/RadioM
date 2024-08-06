@@ -13,6 +13,7 @@
 		894095682C620FDA00867CB7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 894095672C620FDA00867CB7 /* Preview Assets.xcassets */; };
 		894095752C62107500867CB7 /* LandinPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894095742C62107500867CB7 /* LandinPage.swift */; };
 		8940957A2C62634900867CB7 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894095792C62634900867CB7 /* WebView.swift */; };
+		8940957C2C6271F200867CB7 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8940957B2C6271F200867CB7 /* SoundManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		894095742C62107500867CB7 /* LandinPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandinPage.swift; sourceTree = "<group>"; };
 		894095782C622EBF00867CB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		894095792C62634900867CB7 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		8940957B2C6271F200867CB7 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 		8940956F2C62100D00867CB7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8940957B2C6271F200867CB7 /* SoundManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				894095752C62107500867CB7 /* LandinPage.swift in Sources */,
 				894095632C620FD900867CB7 /* ContentView.swift in Sources */,
 				894095612C620FD900867CB7 /* RadioMApp.swift in Sources */,
+				8940957C2C6271F200867CB7 /* SoundManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,8 +316,7 @@
 				INFOPLIST_FILE = RadioM/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -341,8 +344,7 @@
 				INFOPLIST_FILE = RadioM/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

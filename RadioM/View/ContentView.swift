@@ -26,13 +26,18 @@ struct ContentView: View {
                         
                     }
                     .shadow(color: .blue, radius: 20, x: 0.0, y: 10)
-                RoundedRectangle(cornerSize: CGSize(width: 25, height: 25))
-                    .padding()
+//                RoundedRectangle(cornerSize: CGSize(width: 25, height: 25))
+//                    .padding()
 
+                WebView()
                 
+//                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .clipShape(RoundedRectangle(cornerSize: CGSize(width: 20, height: 10)))
+                    .padding()
                 Spacer()
                 VStack {
                     Button {
+                        
                         isPlaying.toggle()
                     } label: {
                         Image(systemName: isPlaying ? "play.circle" : "pause.circle")

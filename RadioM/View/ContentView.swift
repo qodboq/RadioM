@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var isPlaying: Bool = false
-    
+  
     
     
     var body: some View {
@@ -35,7 +35,8 @@ struct ContentView: View {
                 Spacer()
                 VStack {
                     Button {
-                        SoundManager.instance.playStream()
+                        AudioManager.shared.startAudio()
+//                        AudioManager.instance.playStream()
                         isPlaying.toggle()
                     } label: {
                         Image(systemName: isPlaying ?  "pause.circle" : "play.circle")

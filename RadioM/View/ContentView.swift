@@ -26,7 +26,6 @@ struct ContentView: View {
                         Image(systemName: "circle.fill")
                             .resizable()
                             .frame(width: 300, height: 300, alignment: .center)
-                        
                     }
                     .shadow(color: .blue, radius: 20, x: 0.0, y: 10)
                 WebView()
@@ -35,8 +34,11 @@ struct ContentView: View {
                 Spacer()
                 VStack {
                     Button {
-                        AudioManager.shared.startAudio()
-//                        AudioManager.instance.playStream()
+                        if isPlaying == false {AudioManager.shared.startAudio()
+                        } else {
+                            AudioManager.shared.pause()
+                        }
+
                         isPlaying.toggle()
                     } label: {
                         Image(systemName: isPlaying ?  "pause.circle" : "play.circle")
@@ -48,20 +50,10 @@ struct ContentView: View {
                         .foregroundStyle(.blue)
                         .shadow(radius: 10)
                 }
-//                .background(.green)
                 .padding(.bottom)
-   
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
-//            .background(.yellow)
-
-            
         }
-        
-        
-        
-        
-        
     }
 }
 

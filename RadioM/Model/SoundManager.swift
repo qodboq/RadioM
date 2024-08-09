@@ -8,7 +8,6 @@
 //import SwiftUI
 //import AVKit
 import AVFoundation
-import SwiftUI
 
 
 //    class SoundManager {
@@ -30,8 +29,7 @@ import SwiftUI
 //            
 //        }
 //    }
-//
-//    struct SoundManager: View {
+
         
         
         class AudioManager {
@@ -69,36 +67,25 @@ import SwiftUI
                       player.play()
                   }
               }
+            
+
+            func pause() {
+                    if let player = player {
+                        player.pause()
+                    }
+                }
+            
+            
+            
+//            func deactivateSession() {
+//                    do {
+//                        try session.setActive(false, options: .notifyOthersOnDeactivation)
+//                    } catch let error as NSError {
+//                        print("Failed to deactivate audio session: \(error.localizedDescription)")
+//                    }
+//                }
         }
         
-        
-//        var body: some View {
-//            
-//Text("Pes")
-//            
-//        }
-//    }
-//             func activateSession() {
-//                do{
-//                    try @session.setCategory(
-//                        .playback,
-//                        mode: .default,
-//                        options: []
-//                    )
-//                } catch _ {}
-//
-//                do {
-//                    try session.setActive(true, options: .notifyOthersOnDeactivation)
-//                } catch _ {}
-//
-//                do {
-//                    try session.overrideOutputAudioPort(.speakers)
-//
-//                } catch _ {}
-//
-//            }
-
-            
-            
+    
             
             

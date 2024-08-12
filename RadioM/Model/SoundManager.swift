@@ -10,26 +10,6 @@
 import AVFoundation
 
 
-//    class SoundManager {
-//        
-//        static let instance = SoundManager()
-//
-//        var player: AVAudioPlayer?
-//        
-//        func playStream() {
-//
-//            guard let url = URL(string: "https://dreamsiteradiocp5.com/proxy/radiomariaslomp3?mp=/stream.mp3") else { return } //vsetko funguje :D skoro
-//            
-//            do {
-//                player = try AVAudioPlayer(contentsOf: url)
-//                player?.play()
-//            } catch let error {
-//                print("Error playing sound. \(error.localizedDescription)")
-//            }
-//            
-//        }
-//    }
-
         
         
         class AudioManager {
@@ -74,16 +54,6 @@ import AVFoundation
                         player.pause()
                     }
                 }
-            
-            
-            
-//            func deactivateSession() {
-//                    do {
-//                        try session.setActive(false, options: .notifyOthersOnDeactivation)
-//                    } catch let error as NSError {
-//                        print("Failed to deactivate audio session: \(error.localizedDescription)")
-//                    }
-//                }
         }
         
     

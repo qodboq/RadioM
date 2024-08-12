@@ -8,15 +8,21 @@
 //import SwiftUI
 //import AVKit
 import AVFoundation
-
-
+import MediaPlayer
+import SwiftUI
+   
+ 
         
-        
-        class AudioManager {
+class AudioManager: ObservableObject {
             static let shared = AudioManager()
             private var player: AVPlayer?
             private var session = AVAudioSession.sharedInstance()
-            init() {}
+            @Published var isPlaying: Bool = false // bud to das false tuto alebo do init
+            
+    init() {
+//        let isPlaying = false
+//        self.isPlaying = isPlaying
+    }
         
         
         func configureAudioSession() {
@@ -45,17 +51,47 @@ import AVFoundation
                   
                   if let player = player {
                       player.play()
+                      isPlaying = true
                   }
               }
-            
 
+
+            func setupRemoteTransportControls() {
+                let commandCenter = MPRemoteCommandCenter.shared()
+                
+                commandCenter.playCommand.isEnabled = true
+                commandCenter.playCommand.addTarget { [unowned self] event in
+                    if !isPlaying {
+                        startAudio()
+                        return .success
+                    }
+                    return .commandFailed
+                }
+                
+                commandCenter.pauseCommand.isEnabled = true
+                commandCenter.pauseCommand.addTarget { [unowned self] event in
+                    if isPlaying {
+                        pause()
+                        return .success
+                    }
+                    return .commandFailed
+                }
+                
+            }
+            
             func pause() {
                     if let player = player {
                         player.pause()
+                        isPlaying = false
                     }
                 }
+            func play() {
+                    if let player = player {
+                        player.play()
+                        isPlaying = true
+                    }
+                }
+
+
         }
-        
-    
-            
-            
+                 

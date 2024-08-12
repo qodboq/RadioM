@@ -9,13 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var isPlaying: Bool = false
-  
-    
+    @StateObject var audioManager: AudioManager = AudioManager()
     
     var body: some View {
-        
-        
         
         ZStack {
             LinearGradient(colors: [.blue, .white], startPoint: .top, endPoint: .bottomTrailing)
@@ -34,19 +30,21 @@ struct ContentView: View {
                 Spacer()
                 VStack {
                     Button {
-                        if isPlaying == false {AudioManager.shared.startAudio()
+                        if audioManager.isPlaying == false {AudioManager.shared.startAudio()
+                            AudioManager.shared.setupRemoteTransportControls()
                         } else {
                             AudioManager.shared.pause()
+                            AudioManager.shared.setupRemoteTransportControls()
                         }
 
-                        isPlaying.toggle()
+                        audioManager.isPlaying.toggle()
                     } label: {
-                        Image(systemName: isPlaying ?  "pause.circle" : "play.circle")
+                        Image(systemName: audioManager.isPlaying ?  "pause.circle" : "play.circle")
                             .resizable()
                             .frame(width: 50, height: 50, alignment: .center)
                             .contentTransition(.symbolEffect)
                     }
-                    Text(isPlaying ?  "Pause" : "Play")
+                    Text(audioManager.isPlaying ?  "Pause" : "Play")
                         .foregroundStyle(.blue)
                         .shadow(radius: 10)
                 }

@@ -10,14 +10,14 @@
 import AVFoundation
 import MediaPlayer
 import SwiftUI
-   
+import Observation
  
-        
-class AudioManager: ObservableObject {
+@Observable
+class AudioManager {
             static let shared = AudioManager()
             private var player: AVPlayer?
             private var session = AVAudioSession.sharedInstance()
-            @Published var isPlaying: Bool = false // bud to das false tuto alebo do init
+            var isPlaying: Bool = false // bud to das false tuto alebo do init
             
     init() {
 //        let isPlaying = false

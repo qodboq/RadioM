@@ -7,9 +7,10 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
     
-    @StateObject var audioManager: AudioManager = AudioManager()
+    @State var audioManager: AudioManager = AudioManager()
     
     var body: some View {
         

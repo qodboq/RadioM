@@ -18,26 +18,31 @@ struct ContentView: View {
             LinearGradient(colors: [.blue, .white], startPoint: .top, endPoint: .bottomTrailing)
                 .ignoresSafeArea()
             VStack {
-                Image("Maria")
-                    .mask {
-                        Image(systemName: "circle.fill")
-                            .resizable()
-                            .frame(width: 300, height: 300, alignment: .center)
-                    }
-                    .shadow(color: .blue, radius: 20, x: 0.0, y: 10)
+                GeometryReader { geometry in
+                    let imageSize = min(geometry.size.width, geometry.size.height) * 0.9
+                    Image("Maria")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: imageSize, height: imageSize)
+                        .clipShape(Circle())
+                        .shadow(color: .blue, radius: 20, x: 0.0, y: 10)
+                        .position(x: geometry.size.width / 2, y: geometry.size.height / 2)
+                }
+                .frame(height: 250)
+                
                 WebView()
                     .clipShape(RoundedRectangle(cornerSize: CGSize(width: 20, height: 10)))
                     .padding()
                 Spacer()
                 VStack {
                     Button {
-                        if audioManager.isPlaying == false {AudioManager.shared.startAudio()
+                        if audioManager.isPlaying == false {
+                            AudioManager.shared.startAudio()
                             AudioManager.shared.setupRemoteTransportControls()
                         } else {
                             AudioManager.shared.pause()
                             AudioManager.shared.setupRemoteTransportControls()
                         }
-
                         audioManager.isPlaying.toggle()
                     } label: {
                         Image(systemName: audioManager.isPlaying ?  "pause.circle" : "play.circle")
